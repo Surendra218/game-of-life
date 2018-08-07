@@ -492,7 +492,10 @@
                         <artifactId>maven-jxr-plugin</artifactId>
                         <version>2.1</version>
                         
-                        <distributionManagement>
+                 </plugin>
+                </plugins>
+            </reporting>
+		<distributionManagement>
                             <repository>
 	                            <id>deployment</id> <!-- this ID should match with server id which we configure in settings.xml file. -->
 		                        <name>Nexus Release Repository</name>
@@ -504,9 +507,6 @@
                                 <url>http://18.218.194.135:8081/nexus/content/repositories/snapshots/</url>
                             </snapshotRepository>
                         </distributionManagement>
-                    </plugin>
-                </plugins>
-            </reporting>
         </profile>
     </profiles>
 </project>
