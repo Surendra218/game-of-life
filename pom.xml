@@ -413,7 +413,9 @@
                  </plugin>
                 </plugins>
             </reporting>
-		<distributionManagement>
+        </profile>
+    </profiles>
+	<distributionManagement>
                             <repository>
 	                            <id>deployment</id>
 		                        <name>Nexus Release Repository</name>
@@ -425,7 +427,5 @@
                                 <url>http://18.218.194.135:8081/nexus/content/repositories/snapshots/</url>
                             </snapshotRepository>
                         </distributionManagement>
-        </profile>
-    </profiles>
 </project>
 
