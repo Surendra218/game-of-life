@@ -26,7 +26,7 @@
         <developerConnection>scm:git:git@github.com:${github.account}/game-of-life.git</developerConnection>
         <url>scm:git:git@github.com:${github.account}/game-of-life.git</url>
     </scm>
-    <build>
+     <build>
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -491,6 +491,19 @@
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-jxr-plugin</artifactId>
                         <version>2.1</version>
+                        
+                        <distributionManagement>
+                            <repository>
+	                            <id>deployment</id> <!-- this ID should match with server id which we configure in settings.xml file. -->
+		                        <name>Nexus Release Repository</name>
+		                        <url>http://18.218.194.135:8081/nexus/content/repositories/releases/</url>
+	                        </repository>
+                            <snapshotRepository>
+                                <id>deployment</id>
+                                <name>Nexus Snapshots Repository</name>
+                                <url>http://18.218.194.135:8081/nexus/content/repositories/snapshots/</url>
+                            </snapshotRepository>
+                        </distributionManagement>
                     </plugin>
                 </plugins>
             </reporting>
